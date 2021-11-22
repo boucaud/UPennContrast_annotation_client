@@ -18,7 +18,7 @@ PATHS = {
 class UPennContrastAnnotationClient:
     """
     Helper class to exchange annotation related information from a remote UPennContrast girder instance.
-    Most methods simply send a translated request to the girder API and returns the result. No particular checks are done.
+    Most methods simply send a translated request to the girder API and return the result. No particular checks are done.
     """
     # TODO: get schemas from girder and validate here ?
 
