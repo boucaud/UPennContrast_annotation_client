@@ -35,14 +35,20 @@ class UPennContrastAnnotationClient:
 
     # Annotations
 
-    def getAnnotationsByDatasetId(self, datasetId):
+    def getAnnotationsByDatasetId(self, datasetId, shape=None): # TODO: shape
         """
         Get the list of all annotations in the specified dataset
 
         :param str datasetId: The dataset's id
+        :param str shape: optional filter by shape
         :return: A list of annotations
         """
-        return self.client.get(PATHS['annotation_by_dataset'].format(datasetId=datasetId))
+        url = PATHS['annotation_by_dataset'].format(datasetId=datasetId)
+
+        if shape:
+            url = '{url}&shape={shape}'.format(url=url, shape=shape)
+
+        return self.client.get(url)
 
     def getAnnotationById(self, annotationId):
         """
