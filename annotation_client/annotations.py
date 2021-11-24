@@ -1,9 +1,9 @@
 import girder_client
 
 PATHS = {
-    'annotation': '/annotations/',
-    'annotation_by_id': '/annotations/{annotationId}',
-    'annotation_by_dataset': '/annotations?datasetId={datasetId}',
+    'annotation': '/upenn_annotation/',
+    'annotation_by_id': '/upenn_annotation/{annotationId}',
+    'annotation_by_dataset': '/upenn_annotation?datasetId={datasetId}',
 
     'connection': '/annotation_connection/',
     'connection_by_id': '/annotation_connection/{connectionId}',
